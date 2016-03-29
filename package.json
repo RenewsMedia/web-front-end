@@ -1,0 +1,22 @@
+{
+    "name": "renews.web-front-end",
+    "description": "Renews media web front-end",
+    "version": "0.0.1",
+    "author": {
+        "name": "Tsakh Eugene",
+        "email": "onatolich@gmail.com"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Onatolich/renews.web-front-end"
+    },
+    "dependencies": {
+
+    },
+    "devDependencies": {
+        "bower": "1.7.7"
+    },
+
+    "private": true
+}
