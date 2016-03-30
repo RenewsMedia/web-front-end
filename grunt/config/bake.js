@@ -1,5 +1,5 @@
 module.exports = {
-    main: {
+    dev: {
         files: {
             'page.html': 'page/main.html'
         }
