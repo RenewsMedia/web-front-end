@@ -5,23 +5,11 @@
     <title>Renews</title>
     <link rel="stylesheet" href="./theme/style.css">
 
-    <script src="/src/bower_components/requirejs/require.js"></script>
-    <script>
-        requirejs(['/require.config.js'], function(config) {
-            requirejs.config(config);
-            requirejs(['jquery', 'common/App'], function($, App) {
-                $(function() {
-                    new App({
-                        el: 'body'
-                    });
-                });
-            });
-        });
-    </script>
+    <!--(bake scripts.html)-->
 </head>
 <body>
-    <!--bake header.html-->
-    <!--bake content.html-->
-    <!--bake footer.html-->
+    <!--(bake header.html)-->
+    <!--(bake content.html)-->
+    <!--(bake footer.html)-->
 </body>
 </html>
