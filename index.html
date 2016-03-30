@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Renews</title>
+    <script src="/src/bower_components/requirejs/require.js"></script>
+
+    <script>
+        requirejs(['/require.config.js'], function(config) {
+            requirejs.config(config);
+            requirejs(['jquery', 'common/App'], function($, App) {
+                $(function() {
+                    new App({
+                        el: 'body'
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<a href="ololo">Ololo</a>
+</body>
+</html>
