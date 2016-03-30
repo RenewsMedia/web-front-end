@@ -21,6 +21,11 @@ define(function(require) {
 
         initEvents: function() {
             this.listenTo(this.page, 'click:link', this.onLinkClick);
+            this.listenTo(this.router, 'controllerReady', this.applyController);
+        },
+
+        applyController: function(controller) {
+            controller.setElement(this.$('.content'));
         },
 
         onLinkClick: function(href) {

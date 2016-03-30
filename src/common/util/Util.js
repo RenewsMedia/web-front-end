@@ -1,7 +1,9 @@
 define(function(require) {
-    var urlUtil = require('common/util/urlUtil');
+    var url = require('common/util/url'),
+        ajax = require('common/util/ajax');
 
     return {
-        url: urlUtil
+        url: url,
+        ajax: ajax
     };
 });

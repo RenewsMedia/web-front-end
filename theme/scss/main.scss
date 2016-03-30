@@ -1,0 +1,12 @@
+@import "variables";
+
+* {
+    box-sizing: border-box;
+    position: relative;
+}
+
+body {
+    background: $main_background;
+    margin: auto;
+    width: 100%;
+}
