@@ -13,13 +13,14 @@
   },
   "dependencies": {
     "grunt": "^0.4.5",
+    "grunt-bake": "^1.6.3",
     "grunt-contrib-connect": "^1.0.1",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "load-grunt-config": "^0.19.1"
   },
   "devDependencies": {
-    "bower": "1.7.7"
+    "bower": "^1.7.7"
   },
   "private": true
 }
