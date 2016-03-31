@@ -1,13 +1,22 @@
 module.exports = {
-    dist: {
+    dev: {
         options: {
             cacheLocation: 'theme/scss/.sass-cache',
-            sourcemap: 'inline',
+            sourcemap: 'none',
+            unixNewlines: true
+        },
+        files: {
+            './theme/css/style.css': './theme/scss/style.scss'
+        }
+    },
+    build: {
+        options: {
+            noCache: true,
             unixNewlines: true,
             style: 'compressed'
         },
         files: {
-            './theme/css/style.min.css': './theme/scss/style.scss'
+            './build/style.min.css': './theme/scss/style.scss'
         }
     }
 };
