@@ -19,5 +19,7 @@ This task make build snapshot in ./build/ directory
 ## Start server (dev & prod)
 
 ```shell
-$ node server.js
+$ node server.js [port]
 ```
+
+Default port is 8090
