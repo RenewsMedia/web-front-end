@@ -1,3 +1,4 @@
+var port = process.argv[2] || 8090;
 var app = require('express')();
 
 app.get('*', function(req, res) {
@@ -8,4 +9,6 @@ app.get('*', function(req, res) {
     res.sendFile(process.cwd() + '/' + file);
 });
 
-module.exports = app;
+app.listen(port, function() {
+    console.log('Express server started on port ' + port);
+});

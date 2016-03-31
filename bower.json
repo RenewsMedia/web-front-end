@@ -1,11 +1,11 @@
 {
   "name": "renews.web-front-end",
-  "dependencies": {},
-  "devDependencies": {
-    "requirejs": "^2.2.0",
-    "jquery": "^2.2.2",
-    "underscore": "^1.8.3",
-    "backbone": "^1.3.2"
+  "dependencies": {
+      "requirejs": "^2.2.0",
+      "jquery": "^2.2.2",
+      "underscore": "^1.8.3",
+      "backbone": "^1.3.2"
   },
+  "devDependencies": {},
   "private": true
 }

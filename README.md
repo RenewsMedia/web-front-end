@@ -8,8 +8,16 @@ $ bower install
 $ grunt init
 ```
 
-## Start server (dev)
+## Production
+
+Make dev installation, then:
+```shell
+$ grunt build
+```
+This task make build snapshot in ./build/ directory
+
+## Start server (dev & prod)
 
 ```shell
-$ grunt start-server:dev
+$ node server.js
 ```
