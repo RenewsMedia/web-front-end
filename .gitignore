@@ -2,3 +2,4 @@ page.html
 node_modules/*
 src/bower_components/*
 theme/css
+theme/scss/.sass-cache

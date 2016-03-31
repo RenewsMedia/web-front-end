@@ -1,3 +1,3 @@
 module.exports = function(grunt) {
-    grunt.registerTask('init', ['bake:dev', 'sass', 'cssmin']);
+    grunt.registerTask('init', ['bake:dev', 'sass']);
 };
