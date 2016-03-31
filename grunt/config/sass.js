@@ -16,7 +16,7 @@ module.exports = {
             style: 'compressed'
         },
         files: {
-            './build/style.min.css': './theme/scss/style.scss'
+            './build/theme/css/style.min.css': './theme/scss/style.scss'
         }
     }
 };

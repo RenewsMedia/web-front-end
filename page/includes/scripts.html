@@ -1,13 +1,11 @@
-<script src="/src/bower_components/requirejs/require.js"></script>
+<!--(bake-start _if="build")-->
+<script src="./app.min.js"></script>
+<!--(bake-end)-->
+
+<!--(bake-start _if="!build")-->
+<script data-main="src/require.config.js" src="/src/bower_components/requirejs/require.js"></script>
+<!--(bake-end)-->
+
 <script>
-    requirejs(['/require.config.js'], function(config) {
-        requirejs.config(config);
-        requirejs(['jquery', 'common/App'], function($, App) {
-            $(function() {
-                new App({
-                    el: 'body'
-                });
-            });
-        });
-    });
+    requirejs(['startup']);
 </script>
