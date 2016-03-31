@@ -12,6 +12,15 @@
     }
 }
 
+// Background image
+@mixin bg-image($path, $position: 0 0, $repeat: no-repeat) {
+    background: {
+        image: url($images_dir + $path);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
 // Transition
 @mixin transition($args...) {
     -webkit-transition: $args;

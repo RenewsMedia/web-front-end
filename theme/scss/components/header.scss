@@ -7,6 +7,17 @@
 
     a {
         color: $color_white;
+
+        &#logo {
+            @include bg-image('logo.png', center center);
+            background-size: contain;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: $header_height;
+            width: $header_height * 2;
+        }
     }
 
     @import "navigation";
