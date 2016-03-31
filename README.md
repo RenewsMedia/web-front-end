@@ -1,5 +1,3 @@
-# Renews.web-front-end
-
 ## Installation (dev)
 
 ```shell
