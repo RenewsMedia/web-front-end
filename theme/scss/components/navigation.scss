@@ -1,0 +1,25 @@
+@import "../variables";
+
+.nav {
+    @extend %clearfix;
+
+    list-style: none;
+    margin: 0;
+
+    li {
+        float: left;
+
+        a {
+            color: $color_grey_middle;
+            display: block;
+            height: $header_height;
+            line-height: $header_height;
+            padding: 0 20px;
+            text-decoration: none;
+
+            &:hover {
+                color: $color_white;
+            }
+        }
+    }
+}

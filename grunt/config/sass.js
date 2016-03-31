@@ -5,7 +5,7 @@ module.exports = {
             sourcemap: 'none'
         },
         files: {
-            './theme/style.css': './theme/scss/style.scss'
+            './theme/css/style.css': './theme/scss/style.scss'
         }
     }
 };

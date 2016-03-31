@@ -1,0 +1,16 @@
+@import "../variables";
+
+.header {
+    background: $bg_header;
+    height: $header_height;
+    margin-bottom: $base_margin;
+
+    a {
+        color: $color_white;
+    }
+
+    .nav {
+        position: absolute;
+        right: 0;
+    }
+}

@@ -6,7 +6,16 @@
 }
 
 body {
-    background: $main_background;
+    background: $bg_body;
+    font-family: Roboto-Light, 'Segoe UI', Arial, serif;
     margin: auto;
     width: 100%;
+}
+
+a, a:link, a:visited {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
 }

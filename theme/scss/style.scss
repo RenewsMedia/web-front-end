@@ -1,3 +1,8 @@
 @import "variables";
+@import "mixins";
+@import "fonts";
 @import "utils";
 @import "main";
+
+@import "components/header";
+@import "components/navigation";
