@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
     var path = require('path'),
         config = {
-            basePage: './page.html',
             dev: {
                 port: 8090
             }
