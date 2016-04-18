@@ -1,8 +1,10 @@
 .idea/
 node_modules/
 src/bower_components/
+
+# Temporaries
+theme/scss/.sass-cache/
+
+# Snapshots
 dist/
 build/
-theme/css/
-theme/scss/.sass-cache/
-page.html
