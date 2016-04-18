@@ -1,7 +1,7 @@
 define(function(require) {
     var _ = require('underscore'),
         Backbone = require('backbone'),
-        Util = require('Util'),
+        urlUtil = require('util/url'),
         ControllerFactory = require('common/ControllerFactory'),
         history = window.history;
 
@@ -21,7 +21,7 @@ define(function(require) {
 
         applyRoute: function(route) {
             var Controller, options;
-            this.route = Util.url.parse(route);
+            this.route = urlUtil.parse(route);
 
             options = ControllerFactory.prepareParams(this.route.controller, this.route.params);
 

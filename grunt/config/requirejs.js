@@ -7,7 +7,9 @@ module.exports = {
             name: 'startup',
             generateSourceMaps: true,
             preserveLicenseComments: false,
-            include: ['bower_components/requirejs/require.js']
+            include: [
+                'bower_components/requirejs/require.js'
+            ]
         }
     }
 };
