@@ -6,7 +6,6 @@ $ grunt init
 ```
 
 ## Production
-Make dev installation, then:
 ```shell
 $ grunt build
 ```
