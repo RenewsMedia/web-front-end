@@ -6,7 +6,7 @@ module.exports = {
             unixNewlines: true
         },
         files: {
-            './theme/css/style.css': './theme/scss/style.scss'
+            './dist/theme/css/style.css': './theme/scss/style.scss'
         }
     },
     build: {

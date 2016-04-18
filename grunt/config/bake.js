@@ -3,11 +3,11 @@ module.exports = {
         options: {
             content: {
                 build: false,
-                cssStyleFile: './theme/css/style.css'
+                cssStyleFile: './dist/theme/css/style.css'
             }
         },
         files: {
-            'page.html': 'page/main.html'
+            'dist/page.html': 'page/main.html'
         }
     },
     build: {

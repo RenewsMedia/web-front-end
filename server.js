@@ -1,14 +1,15 @@
 var port = process.argv[2] || 8090;
+var defaultPage = process.argv[3] || 'page.html';
 var app = require('express')();
 
 app.get('*', function(req, res) {
     var file = req.path;
     if (!(/(\.htm|js|json|css|jpg|png|ico|woff|ttf|map)$/i).test(req.path)) {
-        file = 'page.html';
+        file = defaultPage;
     }
-    res.sendFile(process.cwd() + '/' + file);
+    res.sendFile(__dirname + '/' + file);
 });
 
 app.listen(port, function() {
-    console.log('Express server started on port ' + port);
+    console.log('The server was started on http://localhost:' + port);
 });
