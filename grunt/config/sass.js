@@ -13,7 +13,7 @@ module.exports = {
         options: {
             noCache: true,
             unixNewlines: true,
-            style: 'compressed'
+            sourcemap: 'none'
         },
         files: {
             './build/theme/css/style.min.css': './theme/scss/style.scss'

@@ -5,7 +5,7 @@ module.exports = {
             mainConfigFile: 'src/require.config.js',
             out: 'build/app.min.js',
             name: 'startup',
-            generateSourceMaps: true,
+            generateSourceMaps: false,
             preserveLicenseComments: false,
             include: [
                 'bower_components/requirejs/require.js'
