@@ -1,19 +1,19 @@
 .nav {
     @extend %clearfix;
 
-    list-style: none;
     margin: 0;
+    list-style: none;
 
     li {
         float: left;
 
         a {
-            color: $color_grey_middle;
             display: block;
-            height: $header_height;
-            line-height: $header_height;
             padding: 0 20px;
+            height: $header_height;
+            color: $color_grey_middle;
             text-decoration: none;
+            line-height: $header_height;
 
             &:hover {
                 color: $color_white;

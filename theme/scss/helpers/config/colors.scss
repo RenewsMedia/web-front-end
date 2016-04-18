@@ -1,10 +1,16 @@
+// Shades of grey
+$grey_fa: #fafafa;
+$grey_ea: #eaeaea;
+$grey_cc: #ccc;
+$grey_aa: #aaa;
+
 // Colors
 $color_white: #fff;
-$color_grey_light: #fafafa;
-$color_grey_middle: #ccc;
-$color_grey: #aaa;
+$color_grey_light: $grey_fa;
+$color_grey_middle: $grey_cc;
+$color_grey: $grey_aa;
 
 // Background colors
-$bg_body: #fafafa;
+$bg_body: #f5f5f5;
 $bg_header: #333;
 $bg_white: $color_white;
