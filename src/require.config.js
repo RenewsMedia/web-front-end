@@ -1,4 +1,4 @@
-requirejs.config({
+var requireConfig = {
     baseUrl: '/src',
 
     paths: {
@@ -30,4 +30,4 @@ requirejs.config({
             exports: 'Handlebars'
         }
     }
-});
+};

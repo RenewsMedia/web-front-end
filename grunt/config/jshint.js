@@ -1,4 +1,5 @@
 module.exports = {
     base: ['Gruntfile.js', 'server.js', 'grunt/**/*.js'],
-    scripts: ['src/**/*.js', '!src/bower_components/**/*.js']
+    scripts: ['src/**/*.js', '!src/bower_components/**/*.js'],
+    test: ['test/**/*.test.js']
 };

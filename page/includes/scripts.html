@@ -3,7 +3,11 @@
 <!--(bake-end)-->
 
 <!--(bake-start _if="!build")-->
-<script data-main="/src/require.config.js" src="/src/bower_components/requirejs/require.js"></script>
+<script src="/src/require.config.js"></script>
+<script src="/src/bower_components/requirejs/require.js"></script>
+<script>
+    requirejs.config(requireConfig);
+</script>
 <!--(bake-end)-->
 
 <script>
