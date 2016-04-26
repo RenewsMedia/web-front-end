@@ -1,4 +1,4 @@
-var requireConfig = {
+window.requireConfig = {
     baseUrl: '/src',
 
     paths: {
