@@ -25,7 +25,7 @@ define(function(require) {
 
         addRegion: function(name, view) {
             this._regions[name] = view;
-            this.listenTo(view, 'render', _.bind(this.updateRegion, this, name));
+            this.listenTo(view, 'render', _.bind(this.appendRegion, this, name));
             view.render();
         },
 
