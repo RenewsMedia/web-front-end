@@ -1,8 +1,8 @@
 define(function(require) {
     var BaseController = require('common/base/BaseController'),
-        Header = require('common/controller/main/header/Header'),
+        Header = require('common/page/main/header/Header'),
 
-        template = require('text!common/controller/main/Main.hbs');
+        template = require('text!common/page/main/Main.hbs');
 
     return BaseController.extend({
         template: template,
