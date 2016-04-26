@@ -19,11 +19,13 @@
     "grunt-bake": "^1.6.3",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-requirejs": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-prettify": "^0.4.0",
-    "load-grunt-config": "^0.19.1"
+    "load-grunt-config": "^0.19.1",
+    "text": "github:requirejs/text"
   },
   "devDependencies": {},
   "private": true

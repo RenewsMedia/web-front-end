@@ -9,9 +9,10 @@ requirejs.config({
         handlebars: 'bower_components/handlebars/handlebars.min',
 
         util: 'common/util',
+        BaseView: 'common/base/BaseView',
 
         // Plugins
-        hbs: 'bower_components/require-handlebars-plugin/hbs'
+        text: '../node_modules/text/text'
     },
 
     shim: {

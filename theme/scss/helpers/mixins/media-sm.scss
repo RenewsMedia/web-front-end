@@ -1,4 +1,4 @@
-@mixin bp-small {
+@mixin media-sm {
     @media only screen and (max-width: $bp_small_width) {
         @content;
     }

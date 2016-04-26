@@ -7,3 +7,13 @@
         }
     }
 }
+
+@include media-lg {
+    #main {
+        > .wrapper {
+            > .content {
+                border-width: 0 0 1px 0;
+            }
+        }
+    }
+}

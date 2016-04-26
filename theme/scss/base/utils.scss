@@ -7,3 +7,9 @@
     max-width: 100%;
     width: $wrapper_width;
 }
+
+@include media-lg {
+    .wrapper {
+        width: 100%;
+    }
+}

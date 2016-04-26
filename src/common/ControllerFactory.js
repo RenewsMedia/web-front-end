@@ -1,7 +1,7 @@
 define(function(require) {
     var _ = require('underscore'),
         controllers = {
-            main: require('common/controller/Main')
+            main: require('common/controller/main/Main')
         };
 
     var DEFAULT_CONTROLLER = 'main';

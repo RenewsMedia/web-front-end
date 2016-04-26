@@ -12,6 +12,7 @@
             top: 0;
             left: 0;
             display: block;
+            margin: 0 20px;
             width: $header_height * 2;
             height: $header_height;
             background-size: contain;
@@ -22,5 +23,11 @@
     .nav {
         position: absolute;
         right: 0;
+    }
+}
+
+@include media-lg {
+    .header {
+        margin-bottom: 0;
     }
 }

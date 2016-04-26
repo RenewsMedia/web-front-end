@@ -16,7 +16,7 @@ define(function(require) {
         },
 
         initEvents: function() {
-            window.onpopstate = _.bind(this.onPopState)
+            window.onpopstate = _.bind(this.onPopState);
         },
 
         applyRoute: function(route) {
@@ -31,7 +31,7 @@ define(function(require) {
                 Controller = ControllerFactory.getConstructor(this.route.controller);
                 this.controllerName = this.route.controller;
                 this.controller = new Controller(options);
-                this.trigger('controllerReady', this.controller);
+                this.trigger('controllerReady');
             }
 
             if (route !== window.location.href) {
