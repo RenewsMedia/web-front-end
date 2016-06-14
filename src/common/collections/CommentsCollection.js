@@ -6,7 +6,7 @@ define(function(require) {
         urlRoot: '/comments',
         model: CommentModel,
 
-        initialize: function(data, options) {
+        initialize: function(models, options) {
             this.article = options.article;
         },
 
