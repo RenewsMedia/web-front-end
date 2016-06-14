@@ -2,7 +2,7 @@ define(function(require) {
     var BaseView = require('common/base/BaseView'),
         TagsCollectionView = require('common/views/tags/TagsCollectionView'),
 
-        template = require('text!common/views/articles/Article.hbs');
+        template = require('text!common/views/articles/templates/Article.hbs');
     
     return BaseView.extend({
         template: template,
