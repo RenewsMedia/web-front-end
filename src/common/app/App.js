@@ -1,8 +1,8 @@
 define(function(require) {
     var _ = require('underscore'),
         Backbone = require('backbone'),
-        Page = require('common/Page'),
-        Router = require('common/Router');
+        Page = require('common/app/Page'),
+        Router = require('common/app/Router');
 
     var App = function(config) {
         this.config = config;

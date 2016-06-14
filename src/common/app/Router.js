@@ -2,7 +2,7 @@ define(function(require) {
     var _ = require('underscore'),
         Backbone = require('backbone'),
         urlUtil = require('util/url'),
-        ControllerFactory = require('common/ControllerFactory'),
+        ControllerFactory = require('common/app/ControllerFactory'),
         history = window.history;
 
     var Router = function() {
