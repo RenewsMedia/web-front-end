@@ -1,8 +1,9 @@
 define(function(require) {
     var BaseCollection = require('common/base/BaseCollection'),
-        ContentModel = require('common/models/ContentModel');
+        TagModel = require('common/entities/tags/models/TagModel');
 
     return BaseCollection.extend({
-        model: ContentModel
+        urlRoot: '/tags',
+        model: TagModel
     });
 });

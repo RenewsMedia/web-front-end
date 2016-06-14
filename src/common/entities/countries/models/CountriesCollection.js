@@ -1,6 +1,6 @@
 define(function(require) {
     var BaseCollection = require('common/base/BaseCollection'),
-        CountryModel = require('common/models/CountryModel');
+        CountryModel = require('common/entities/countries/models/CountryModel');
 
     var CountriesCollection = BaseCollection.extend({
         urlRoot: '/countries',

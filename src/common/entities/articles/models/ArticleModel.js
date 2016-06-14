@@ -1,9 +1,9 @@
 define(function(require) {
     var BaseModel = require('common/base/BaseModel'),
-        UserModel = require('common/models/UserModel'),
-        ChannelModel = require('common/models/ChannelModel'),
-        TagsCollection = require('common/collections/TagsCollection'),
-        ContentsCollection = require('common/collections/ContentsCollection');
+        UserModel = require('common/entities/users/models/UserModel'),
+        ChannelModel = require('common/entities/channels/models/ChannelModel'),
+        TagsCollection = require('common/entities/tags/models/TagsCollection'),
+        ContentsCollection = require('common/entities/contents/models/ContentsCollection');
 
     return BaseModel.extend({
         urlRoot: '/article',

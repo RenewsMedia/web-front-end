@@ -1,6 +1,6 @@
 define(function(require) {
     var BaseModel = require('common/base/BaseModel'),
-        UserModel = require('common/models/UserModel');
+        UserModel = require('common/entities/users/models/UserModel');
 
     return BaseModel.extend({
         defaults: {
