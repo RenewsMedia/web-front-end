@@ -1,5 +1,5 @@
 define(function(require) {
-    var BaseView = require('BaseView'),
+    var BaseView = require('common/util/BaseView'),
 
         template = require('text!common/pages/main/header/Header.hbs');
     

@@ -1,5 +1,5 @@
 define(function(require) {
-    var BaseCollectionView = require('common/base/BaseCollectionView'),
+    var BaseCollectionView = require('common/util/BaseCollectionView'),
         SimpleArticleView = require('common/entities/articles/views/SimpleArticleView'),
 
         template = require('text!common/entities/articles/templates/ArticlesCollection.hbs');

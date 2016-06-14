@@ -1,5 +1,5 @@
 define(function(require) {
-    var BaseCollection = require('common/base/BaseCollection'),
+    var BaseCollection = require('common/util/BaseCollection'),
         UserModel = require('common/entities/users/models/UserModel');
 
     return BaseCollection.extend({

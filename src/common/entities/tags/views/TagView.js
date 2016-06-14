@@ -1,5 +1,5 @@
 define(function(require) {
-    var BaseView = require('common/base/BaseView'),
+    var BaseView = require('common/util/BaseView'),
 
         template = require('text!common/entities/tags/templates/Tag.hbs');
 

@@ -1,6 +1,6 @@
 define(function(require) {
     var _ = require('underscore'),
-        BaseView = require('common/base/BaseView');
+        BaseView = require('common/util/BaseView');
 
     return BaseView.extend({
         itemViewConstructor: BaseView,

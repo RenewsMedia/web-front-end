@@ -1,5 +1,5 @@
 define(function(require) {
-    var BaseView = require('BaseView');
+    var BaseView = require('common/util/BaseView');
 
     return BaseView.extend({
         setElement: function() {

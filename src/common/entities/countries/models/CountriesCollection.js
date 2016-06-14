@@ -1,5 +1,5 @@
 define(function(require) {
-    var BaseCollection = require('common/base/BaseCollection'),
+    var BaseCollection = require('common/util/BaseCollection'),
         CountryModel = require('common/entities/countries/models/CountryModel');
 
     var CountriesCollection = BaseCollection.extend({

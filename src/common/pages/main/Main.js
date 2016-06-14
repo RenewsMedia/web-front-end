@@ -1,5 +1,5 @@
 define(function(require) {
-    var BaseController = require('common/base/BaseController'),
+    var BaseController = require('common/util/BaseController'),
         Header = require('common/page/main/header/Header'),
 
         template = require('text!common/pages/main/Main.hbs');

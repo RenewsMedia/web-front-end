@@ -1,5 +1,5 @@
 define(function(require) {
-    var BaseModel = require('common/base/BaseModel');
+    var BaseModel = require('common/util/BaseModel');
 
     return BaseModel.extend({
         urlRoot: '/user',

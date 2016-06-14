@@ -1,5 +1,5 @@
 define(function(require) {
-    var BaseModel = require('common/base/BaseModel'),
+    var BaseModel = require('common/util/BaseModel'),
         UserModel = require('common/entities/users/models/UserModel'),
         ChannelModel = require('common/entities/channels/models/ChannelModel'),
         TagsCollection = require('common/entities/tags/models/TagsCollection'),
