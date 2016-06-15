@@ -5,7 +5,8 @@ define(function(require) {
         ControllerFactory = require('app/ControllerFactory'),
         history = window.history;
 
-    var Router = function() {
+    var Router = function(config) {
+        this.config = config;
         this.initialize();
     };
 
@@ -31,7 +32,7 @@ define(function(require) {
                 Controller = ControllerFactory.getConstructor(this.route.controller);
                 this.controllerName = this.route.controller;
                 this.controller = new Controller(options);
-                this.trigger('controllerReady');
+                this.controller.setElement(this.config.container);
             }
 
             if (route !== window.location.href) {

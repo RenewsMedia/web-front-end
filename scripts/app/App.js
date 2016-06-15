@@ -14,19 +14,15 @@ define(function(require) {
             this.page = new Page({
                 el: this.config.el
             });
-            this.router = new Router();
-            this.applyController();
+            this.router = new Router({
+                container: this.page.$('.content')
+            });
 
             this.initEvents();
         },
 
         initEvents: function() {
             this.listenTo(this.page, 'click:link', this.onLinkClick);
-            this.listenTo(this.router, 'controllerReady', this.applyController);
-        },
-
-        applyController: function() {
-            this.router.controller.setElement(this.page.$('.content'));
         },
 
         onLinkClick: function(href) {
