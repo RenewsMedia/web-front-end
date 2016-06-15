@@ -1,6 +1,6 @@
 .idea/
 node_modules/
-src/bower_components/
+scripts/bower_components/
 
 # Temporaries
 theme/scss/.sass-cache/
