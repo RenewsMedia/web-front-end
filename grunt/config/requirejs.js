@@ -1,8 +1,8 @@
 module.exports = {
     build: {
         options: {
-            baseUrl: './src',
-            mainConfigFile: 'src/require.config.js',
+            baseUrl: './scripts',
+            mainConfigFile: 'scripts/require.config.js',
             out: 'build/app.min.js',
             name: 'startup',
             generateSourceMaps: false,

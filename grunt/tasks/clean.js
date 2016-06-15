@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     var config = {
         default: ['./build', './dist'],
-        full: ['./node_modules', './src/bower_components']
+        full: ['./node_modules', './scripts/bower_components']
     };
 
     var cleanup = function(config) {

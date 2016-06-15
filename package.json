@@ -1,5 +1,5 @@
 {
-  "name": "renews.web-front-end",
+  "name": "web-front-end",
   "description": "Renews media web front-end",
   "version": "0.0.1",
   "author": {
@@ -9,9 +9,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Onatolich/renews.web-front-end"
+    "url": "https://github.com/RenewsMedia/web-front-end"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "bower": "^1.7.7",
     "express": "^4.13.4",
     "grunt": "^0.4.5",
@@ -35,6 +36,5 @@
     "phantomjs-prebuilt": "^2.1.7",
     "text": "github:requirejs/text"
   },
-  "devDependencies": {},
   "private": true
 }
