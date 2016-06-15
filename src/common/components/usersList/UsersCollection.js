@@ -1,6 +1,6 @@
 define(function(require) {
     var BaseCollection = require('common/util/BaseCollection'),
-        UserModel = require('common/entities/users/models/UserModel');
+        UserModel = require('common/components/user/UserModel');
 
     return BaseCollection.extend({
         urlRoot: '/users',

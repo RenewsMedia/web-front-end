@@ -1,8 +1,8 @@
 define(function(require) {
     var BaseCollectionView = require('common/util/BaseCollectionView'),
-        TagView = require('common/entities/tags/views/TagView'),
+        TagView = require('common/components/tag/TagView'),
 
-        template = require('text!common/entities/tags/templates/TagsCollection.hbs');
+        template = require('text!common/components/tagsList/TagsList.hbs');
 
     return BaseCollectionView.extend({
         template: template,

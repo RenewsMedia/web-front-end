@@ -1,14 +1,14 @@
 define(function(require) {
     var BaseView = require('common/util/BaseView'),
-        TagsCollectionView = require('common/entities/tags/views/TagsCollectionView'),
+        TagsListView = require('common/components/tagsList/TagsListView'),
 
-        template = require('text!common/entities/articles/templates/Article.hbs');
+        template = require('text!common/components/article/Article.hbs');
     
     return BaseView.extend({
         template: template,
 
         initialize: function() {
-            this.tags = new TagsCollectionView({
+            this.tags = new TagsListView({
                 collection: this.model.tags
             });
 

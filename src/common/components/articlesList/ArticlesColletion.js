@@ -1,9 +1,9 @@
 define(function(require) {
     var BaseCollection = require('common/util/BaseCollection'),
-        TagModel = require('common/entities/tags/models/TagModel');
+        ArticleModel = require('common/components/article/ArticleModel');
 
     return BaseCollection.extend({
-        urlRoot: '/tags',
-        model: TagModel
+        urlRoot: '/articles',
+        model: ArticleModel
     });
 });

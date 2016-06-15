@@ -1,6 +1,6 @@
 define(function(require) {
     var BaseCollection = require('common/util/BaseCollection'),
-        CommentModel = require('common/entities/comments/models/CommentModel');
+        CommentModel = require('common/components/comment/CommentModel');
 
     return BaseCollection.extend({
         urlRoot: '/comments',
