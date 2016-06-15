@@ -1,7 +1,7 @@
 define(function(require) {
     var _ = require('underscore'),
         Backbone = require('backbone'),
-        urlUtil = require('app/util/url'),
+        urlUtil = require('app/util/urlUtil'),
         ControllerFactory = require('app/ControllerFactory'),
         history = window.history;
 
@@ -43,11 +43,9 @@ define(function(require) {
         },
 
         onPopState: function(e) {
-            var route;
+            var route = window.location.origin;
             if (_.has(e.state, 'url')) {
                 route = e.state.url;
-            } else {
-                route = window.location.origin;
             }
             this.applyRoute(route);
         }
