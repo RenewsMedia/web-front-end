@@ -3,11 +3,11 @@ module.exports = function(config) {
         basePath: './',
 
         files: [
-            'src/bower_components/underscore/underscore.js',
-            'src/require.config.js',
+            'scripts/bower_components/underscore/underscore.js',
+            'scripts/require.config.js',
 
             { pattern: 'test/**/*.test.js', included: false },
-            { pattern: 'src/**/**', included: false },
+            { pattern: 'scripts/**/**', included: false },
             { pattern: 'node_modules/text/text.js', included: false },
 
             'test/main-test.js'

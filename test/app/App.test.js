@@ -1,5 +1,5 @@
 define(function(require) {
-    var App = require('common/App');
+    var App = require('app/App');
 
     describe('App test', function() {
         it('should be function', function() {

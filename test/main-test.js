@@ -6,7 +6,7 @@ Object.keys(window.__karma__.files).forEach(function(file) {
 });
 
 require.config(_.extend(requireConfig, {
-    baseUrl: '/base/src',
+    baseUrl: '/base/scripts',
     deps: deps,
     callback: window.__karma__.start
 }));
