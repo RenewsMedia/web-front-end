@@ -3,12 +3,8 @@ define(function(require) {
         Backbone = require('backbone');
 
     return Backbone.View.extend({
-        initialize: function() {
-            this.initEvents();
-        },
-
-        initEvents: function() {
-            this.$el.on('click', 'a[href]', _.bind(this.onLinkClick, this));
+        events: {
+            'click a[href]': 'onLinkClick'
         },
 
         onLinkClick: function(e) {

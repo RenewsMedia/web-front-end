@@ -11,7 +11,7 @@ define(function(require) {
             this.initEvents();
         },
 
-        initEvents: function () {
+        initEvents: function() {
             this.on('render', this.renderItems);
 
             this.listenTo(this.collection, 'change reset add remove');
