@@ -1,10 +1,12 @@
 define(function(require) {
     var _ = require('underscore'),
         controllers = {
+            dev: require('pages/dev/Dev'),
             main: require('pages/main/Main')
         };
 
-    var DEFAULT_CONTROLLER = 'main';
+    var DEFAULT_CONTROLLER = 'dev';
+    // var DEFAULT_CONTROLLER = 'main';
 
     var ControllerFactory = {
         getConstructor: function(name) {
