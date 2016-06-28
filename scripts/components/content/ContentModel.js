@@ -5,7 +5,7 @@ define(function(require) {
         defaults: {
             type: '',
             article: 0,
-            data: {},
+            data: '',
             order: 0
         }
     });

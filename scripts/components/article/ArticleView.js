@@ -18,7 +18,7 @@ define(function(require) {
             });
 
             this.addRegions({
-                contents: this.contents,
+                content: this.contents,
                 tags: this.tags
             });
         }

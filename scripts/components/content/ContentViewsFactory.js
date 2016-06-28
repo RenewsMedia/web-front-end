@@ -9,6 +9,7 @@ define(function(require) {
         if (!_.has(viewsMap, type)) {
             throw new TypeError('Unknown content type');
         }
+        return viewsMap[type];
     };
 
     return function(options) {

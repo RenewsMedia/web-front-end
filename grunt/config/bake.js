@@ -3,7 +3,7 @@ module.exports = {
         options: {
             content: {
                 build: false,
-                cssStyleFile: './dist/theme/css/style.css'
+                cssStyleFile: '/dist/theme/css/style.css'
             }
         },
         files: {
@@ -14,7 +14,7 @@ module.exports = {
         options: {
             content: {
                 build: true,
-                cssStyleFile: './theme/css/style.min.css'
+                cssStyleFile: '/theme/css/style.min.css'
             }
         },
         files: {

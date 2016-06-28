@@ -9,6 +9,11 @@ define(function(require) {
         _regions: {},
 
         hbs: Handlebars,
+        
+        constructor: function() {
+            Backbone.View.prototype.constructor.apply(this, arguments);
+            this._initBaseEvents();
+        },
 
         getData: function() {
             if (_.isObject(this.model)) {
@@ -49,8 +54,18 @@ define(function(require) {
         render: function() {
             this._template = this._template || this.hbs.compile(this.template);
             this.setElement(this._template(this.getData()));
+            this.updateRegions();
             this.trigger('render');
             return this;
+        },
+
+        _initBaseEvents: function() {
+            if (_.has(this, 'model')) {
+                this.listenTo(this.model, 'change', this.render);
+            }
+            if (_.has(this, 'collection')) {
+                this.listenTo(this.collection, 'change reset add remove', this.render);
+            }
         },
 
         _getRegionEl: function(name) {

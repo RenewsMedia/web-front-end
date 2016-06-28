@@ -40,11 +40,19 @@ define(function(require) {
         },
 
         initEvents: function() {
+            this.on('change:contents', this.resetCollections);
+            this.on('change:tags', this.resetCollections);
+
             this.on('change:author', this.fetchAuthor);
             this.on('change:channel', this.fetchChannel);
 
             this.listenTo(this.contents, 'change reset add remove', this.syncContents);
             this.listenTo(this.tags, 'change reset add remove', this.syncTags);
+        },
+
+        resetCollections: function() {
+            this.contents.reset(this.get('contents'));
+            this.tags.reset(this.get('tags'));
         },
 
         fetchAuthor: function() {

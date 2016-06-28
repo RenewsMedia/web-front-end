@@ -1,7 +1,8 @@
 define(function() {
     return {
         api: {
-            host: 'localhost:8091',
+            proto: 'http',
+            host: 'localhost:5000',
             base: '/api/v1'
         }
     };

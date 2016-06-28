@@ -7,7 +7,7 @@ define(function(require) {
     var backboneSyncBuffer = Backbone.sync;
     Backbone.sync = function(method, model, options) {
         backboneSyncBuffer(method, model, _.extend(options, {
-            url: config.api.host + config.api.base + (options.url || _.result(model, 'url'))
+            url: config.api.proto + '://' + config.api.host + config.api.base + (options.url || _.result(model, 'url'))
         }));
     };
 });
