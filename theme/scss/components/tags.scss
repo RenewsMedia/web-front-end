@@ -1,0 +1,10 @@
+.tags {
+    @extend %clearfix;
+
+    padding: 5px 0;
+
+    .tag {
+        float: left;
+        margin-right: 5px;
+    }
+}

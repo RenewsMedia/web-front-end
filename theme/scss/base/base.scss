@@ -1,13 +1,13 @@
 * {
-    box-sizing: border-box;
     position: relative;
+    box-sizing: border-box;
 }
 
 body {
-    background: $bg_body;
-    font-family: Roboto-Light, 'Segoe UI', Arial, serif;
     margin: auto;
     width: 100%;
+    background: $bg_body;
+    font-family: Roboto-Light, 'Segoe UI', Arial, serif;
 }
 
 a, a:link, a:visited {
@@ -16,4 +16,9 @@ a, a:link, a:visited {
 
 a:hover {
     text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }
