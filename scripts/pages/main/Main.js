@@ -1,10 +1,10 @@
 define(function(require) {
-    var BaseController = require('app/base/BaseController'),
+    var BasePageController = require('app/base/BasePageController'),
         Header = require('pages/main/header/Header'),
 
         template = require('text!pages/main/Main.hbs');
 
-    return BaseController.extend({
+    return BasePageController.extend({
         template: template,
         
         initialize: function() {

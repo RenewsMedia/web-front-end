@@ -1,13 +1,13 @@
 define(function() {
-    var urlUtil = {
+    var _url = {
         parse: function(url) {
             return {
                 origin: url,
-                proto: urlUtil.getProto(url),
-                domain: urlUtil.getDomain(url),
-                controller: urlUtil.getController(url),
-                params: urlUtil.getParams(url),
-                hash: urlUtil.getHash(url)
+                proto: _url.getProto(url),
+                domain: _url.getDomain(url),
+                controller: _url.getController(url),
+                params: _url.getParams(url),
+                hash: _url.getHash(url)
             };
         },
 
@@ -43,5 +43,5 @@ define(function() {
         }
     };
 
-    return urlUtil;
+    return _url;
 });

@@ -1,11 +1,11 @@
 define(function(require) {
-    var BaseController = require('app/base/BaseController'),
+    var BasePageController = require('app/base/BasePageController'),
         ArticleModel = require('components/article/ArticleModel'),
         ArticleView = require('components/article/ArticleView'),
 
         template = require('text!pages/article/Article.hbs');
 
-    return BaseController.extend({
+    return BasePageController.extend({
         template: template,
 
         initialize: function(options) {

@@ -1,12 +1,16 @@
 define(function(require) {
     var _ = require('underscore'),
         Backbone = require('backbone'),
+        AuthManager = require('app/AuthManager'),
         Page = require('app/Page'),
         Router = require('app/Router');
 
     var App = function(config) {
         this.config = config;
-        this.initialize();
+
+        // Should starts the app after definition of the current user
+        this.listenTo(AuthManager, 'userReady', this.initialize);
+        AuthManager.checkUser();
     };
 
     _.extend(App.prototype, Backbone.Events, {
