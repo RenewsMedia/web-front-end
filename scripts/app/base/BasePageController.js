@@ -7,6 +7,11 @@ define(function(require) {
             this.render();
         },
 
+        setOptions: function(options) {
+            this.initialize(options);
+            this.render();
+        },
+
         render: function() {
             this._template = this._template || this.hbs.compile(this.template);
             this.$el.empty().append(this._template(this.getData()));

@@ -27,7 +27,7 @@ define(function(require) {
             options = ControllerFactory.prepareParams(this.route.controller, this.route.params);
 
             if (this.route.controller === this.controllerName) {
-                this.controller.set(options);
+                this.controller.setOptions(options);
             } else {
                 Controller = ControllerFactory.getConstructor(this.route.controller);
                 this.controllerName = this.route.controller;

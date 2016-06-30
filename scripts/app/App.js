@@ -8,7 +8,7 @@ define(function(require) {
     var App = function(config) {
         this.config = config;
 
-        // Should starts the app after definition of the current user
+        // Should starts the app when current user is ready
         this.listenTo(AuthManager, 'userReady', this.initialize);
         AuthManager.checkUser();
     };
