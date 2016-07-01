@@ -1,19 +1,30 @@
+/**
+ * App controller
+ * @module app/App
+ * @returns {Object}
+ */
+
 define(function(require) {
     var _ = require('underscore'),
-        Backbone = require('backbone'),
+        _window = require('app/util/_window'),
+        BaseClass = require('app/base/BaseClass'),
         AuthManager = require('app/AuthManager'),
         Page = require('app/Page'),
-        Router = require('app/Router');
+        Router = require('app/Router'),
+        ErrorHandler = require('app/ErrorHandler');
 
-    var App = function(config) {
-        this.config = config;
+    return BaseClass.extend({
+        constructor: function(config) {
+            this.config = config;
 
-        // Should starts the app when current user is ready
-        this.listenTo(AuthManager, 'userReady', this.initialize);
-        AuthManager.checkUser();
-    };
+            this.errorHandler = new ErrorHandler();
+            _window.onerror = _.bind(this.errorHandler.handle, this);
 
-    _.extend(App.prototype, Backbone.Events, {
+            // Should starts the app when current user is ready
+            this.listenTo(AuthManager, 'userReady', this.initialize);
+            AuthManager.checkUser();
+        },
+
         initialize: function() {
             this.page = new Page({
                 el: this.config.el
@@ -33,6 +44,4 @@ define(function(require) {
             this.router.applyRoute(href);
         }
     });
-
-    return App;
 });

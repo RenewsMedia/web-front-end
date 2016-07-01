@@ -1,3 +1,9 @@
+/**
+ * Util for url management
+ * @module app/util/_url
+ * @returns {Object} - Url management lib
+ */
+
 define(function() {
     var _url = {
         parse: function(url) {

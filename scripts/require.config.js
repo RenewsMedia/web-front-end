@@ -3,11 +3,11 @@ window.requireConfig = {
 
     paths: {
         node_modules: '../node_modules',
-        jquery: 'bower_components/jquery/dist/jquery.min',
-        underscore: 'bower_components/underscore/underscore-min',
-        moment: 'bower_components/moment/min/moment.min',
-        backbone: 'bower_components/backbone/backbone-min',
-        handlebars: 'bower_components/handlebars/handlebars.min',
+        jquery: 'bower_components/jquery/dist/jquery',
+        underscore: 'bower_components/underscore/underscore',
+        moment: 'bower_components/moment/moment',
+        backbone: 'bower_components/backbone/backbone',
+        handlebars: 'bower_components/handlebars/handlebars',
 
         // Plugins
         text: '../node_modules/text/text'

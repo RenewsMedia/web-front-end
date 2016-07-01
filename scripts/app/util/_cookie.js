@@ -1,3 +1,9 @@
+/**
+ * Util for cookie management
+ * @module app/util/_cookie
+ * @returns {Object} - Singleton of cookie manager
+ */
+
 define(function(require) {
     var _ = require('underscore'),
         moment = require('moment');
@@ -28,7 +34,7 @@ define(function(require) {
         },
 
         'set': function(name, value, options) {
-            var expires = options.expires;
+            var expires = _.result(options, 'expires');
 
             if (_.isNumber(expires)) {
                 expires = moment.unix(expires);

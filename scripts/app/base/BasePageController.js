@@ -1,3 +1,10 @@
+/**
+ * Base page controller
+ * @abstract
+ * @module app/base/BasePageController
+ * @returns {Object}
+ */
+
 define(function(require) {
     var BaseView = require('app/base/BaseView');
 
@@ -16,6 +23,7 @@ define(function(require) {
             this._template = this._template || this.hbs.compile(this.template);
             this.$el.empty().append(this._template(this.getData()));
             this.updateRegions();
+            this.delegateEvents();
             this.trigger('render', this);
         }
     }, {

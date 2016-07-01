@@ -1,20 +1,18 @@
-define(function(require) {
-    var _ = require('underscore'),
-        Backbone = require('backbone');
+/**
+ * Base page controller
+ * @module app/Page
+ * @returns {Object}
+ */
 
-    return Backbone.View.extend({
+define(function(require) {
+    var BaseView = require('app/base/BaseView');
+
+    return BaseView.extend({
         events: {
             'click a[href]': 'onLinkClick'
         },
 
         onLinkClick: function(e) {
-            if (
-                e.ctrlKey ||
-                e.which !== 1 ||
-                (/(\.(htm|js|json|css|jpg|png|ico|woff|ttf|map))$/i).test(e.currentTarget.href)
-            ) {
-                return;
-            }
             e.preventDefault();
             this.trigger('click:link', e.currentTarget.href);
         }

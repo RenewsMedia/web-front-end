@@ -1,3 +1,10 @@
+/**
+ * Base view
+ * @abstract
+ * @module app/base/BaseView
+ * @returns {Object}
+ */
+
 define(function(require) {
     var _ = require('underscore'),
         Backbone = require('backbone'),
@@ -41,7 +48,7 @@ define(function(require) {
         },
 
         appendRegion: function(name) {
-            this._getRegionEl(name).empty()
+            this.getRegionEl(name).empty()
                 .append(this._regions[name].getEl());
         },
 
@@ -55,8 +62,13 @@ define(function(require) {
             this._template = this._template || this.hbs.compile(this.template);
             this.setElement(this._template(this.getData()));
             this.updateRegions();
+            this.delegateEvents();
             this.trigger('render');
             return this;
+        },
+
+        getRegionEl: function(name) {
+            return this.$('[data-region="' + name + '"]');
         },
 
         _initBaseEvents: function() {
@@ -66,10 +78,6 @@ define(function(require) {
             if (_.has(this, 'collection')) {
                 this.listenTo(this.collection, 'change reset add remove', this.render);
             }
-        },
-
-        _getRegionEl: function(name) {
-            return this.$('[data-region="' + name + '"]');
         }
     });
 });

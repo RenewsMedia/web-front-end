@@ -1,23 +1,30 @@
+/**
+ * Application router
+ * @module app/Router
+ * @returns {Object}
+ */
+
 define(function(require) {
     var _ = require('underscore'),
-        Backbone = require('backbone'),
+        BaseClass = require('app/base/BaseClass'),
         _url = require('app/util/_url'),
+        _window = require('app/util/_window'),
         ControllerFactory = require('app/ControllerFactory'),
-        history = window.history;
+        history = _window.history;
 
-    var Router = function(config) {
-        this.config = config;
-        this.initialize();
-    };
+    return BaseClass.extend({
+        constructor: function(config) {
+            this.config = config;
+            this.initialize();
+        },
 
-    _.extend(Router.prototype, Backbone.Events, {
         initialize: function() {
             this.initEvents();
-            this.applyRoute(window.location.href);
+            this.applyRoute(_window.location.href);
         },
 
         initEvents: function() {
-            window.onpopstate = _.bind(this.onPopState);
+            _window.onpopstate = _.bind(this.onPopState);
         },
 
         applyRoute: function(route) {
@@ -35,21 +42,19 @@ define(function(require) {
                 this.controller.setElement(this.config.container);
             }
 
-            if (route !== window.location.href) {
+            if (route !== _window.location.href) {
                 history.pushState({
                     url: route
-                }, 'Renews', route);
+                }, 'title', route);
             }
         },
-
+        
         onPopState: function(e) {
-            var route = window.location.origin;
+            var route = _window.location.origin;
             if (_.has(e.state, 'url')) {
                 route = e.state.url;
             }
             this.applyRoute(route);
         }
     });
-
-    return Router;
 });

@@ -1,21 +1,25 @@
+/**
+ * Authorization manager
+ * @module app/AuthManager
+ * @returns {Object}
+ */
+
 define(function(require) {
     var _ = require('underscore'),
         Backbone = require('backbone'),
+        _window = require('app/util/_window'),
         _cookie = require('app/util/_cookie'),
         config = require('config'),
+        BaseClass = require('app/base/BaseClass'),
         CurrentUser = require('app/CurrentUser');
 
-    var AuthManager = function() {
-        return this;
-    };
-
-    _.extend(AuthManager.prototype, Backbone.Events, {
+    var AuthManager = BaseClass.extend({
         checkUser: function() {
             var userId = _cookie.get(config.auth.id_cookie);
             if (userId) {
                 CurrentUser.set('id', userId);
                 CurrentUser.fetch();
-                CurrentUser.one('request', _.bind(this.trigger, this, 'userReady'));
+                CurrentUser.once('sync', _.bind(this.trigger, this, 'userReady'));
             } else {
                 this.trigger('userReady');
             }
@@ -25,14 +29,14 @@ define(function(require) {
             return this._sendRequest({
                 url: '/sign/in',
                 data: data
-            });
+            }).done(_.bind(this.setAuthCookies, this));
         },
 
         signUp: function(data) {
             return this._sendRequest({
                 url: '/sign/up',
                 data: data
-            });
+            }).done(_.bind(this.setAuthCookies, this));
         },
 
         signOut: function() {
@@ -41,15 +45,19 @@ define(function(require) {
             });
         },
 
+        setAuthCookies: function(data) {
+            if (!_.result(data, 'id') || !_.result(data, 'password')) {
+                return;
+            }
+            _cookie.set(config.auth.id_cookie, data.id);
+            _cookie.set(config.auth.pass_cookie, data.password);
+            _window.location.reload();
+        },
+
         _sendRequest: function(options) {
-            var dfd = Backbone.$.Deferred();
-
-            Backbone.sync('POST', this, options)
-                .done(function(response) {
-                    dfd.resolve(_.result(response, 'result') || false);
-                });
-
-            return dfd;
+            return Backbone.sync('create', this, _.extend({
+                type: 'post'
+            }, options));
         }
     });
 

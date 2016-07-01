@@ -1,3 +1,10 @@
+/**
+ * Base collection view
+ * @abstract
+ * @module app/base/BaseCollectionView
+ * @returns {Object}
+ */
+
 define(function(require) {
     var _ = require('underscore'),
         BaseView = require('app/base/BaseView');
@@ -32,6 +39,7 @@ define(function(require) {
             this.setElement(this._template(this.getData()));
             this.renderItems();
             this.trigger('render');
+            this.delegateEvents();
             return this;
         },
 

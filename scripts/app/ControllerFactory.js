@@ -1,8 +1,15 @@
+/**
+ * Page controllers factory
+ * @module app/ControllerFactory
+ * @returns {Object}
+ */
+
 define(function(require) {
     var _ = require('underscore'),
         controllers = {
             main: require('pages/main/Main'),
-            article: require('pages/article/Article')
+            article: require('pages/article/Article'),
+            sign: require('pages/sign/Sign')
         };
     
     var DEFAULT_CONTROLLER = 'main';
