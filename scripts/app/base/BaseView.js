@@ -26,7 +26,9 @@ define(function(require) {
             if (_.isObject(this.model)) {
                 return this.model.toJSON();
             } else if (_.isObject(this.collection)) {
-                return this.collection.toJSON();
+                return {
+                    entries: this.collection.toJSON()
+                };
             }
             return {};
         },

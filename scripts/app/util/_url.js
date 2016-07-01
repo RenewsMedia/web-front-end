@@ -35,7 +35,7 @@ define(function() {
 
         getFullParams: function(url) {
             return url
-                .replace(/^(http(s)?:\/\/([a-z0-9-\.:]*)\/)?/i, '')
+                .replace(/^((\/)|(http(s)?:\/\/([a-z0-9-\.:]*)\/))?/i, '')
                 .replace(/(#(.*))?$/i, '')
                 .split('/');
         },

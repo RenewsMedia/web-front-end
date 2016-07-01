@@ -11,14 +11,14 @@ define(function(require) {
         AuthManager = require('app/AuthManager'),
         Page = require('app/Page'),
         Router = require('app/Router'),
+        GlobalBus = require('app/GlobalBus'),
         ErrorHandler = require('app/ErrorHandler');
 
     return BaseClass.extend({
         constructor: function(config) {
             this.config = config;
 
-            this.errorHandler = new ErrorHandler();
-            _window.onerror = _.bind(this.errorHandler.handle, this);
+            _window.onerror = _.bind(ErrorHandler.handle, ErrorHandler);
 
             // Should starts the app when current user is ready
             this.listenTo(AuthManager, 'userReady', this.initialize);
@@ -34,14 +34,16 @@ define(function(require) {
             });
 
             this.initEvents();
+            this.router.applyRoute(_window.location.href);
         },
 
         initEvents: function() {
-            this.listenTo(this.page, 'click:link', this.onLinkClick);
+            this.listenTo(this.page, 'click:link', this.redirect);
+            this.listenTo(GlobalBus, 'redirect', this.redirect);
         },
 
-        onLinkClick: function(href) {
-            this.router.applyRoute(href);
+        redirect: function(url) {
+            this.router.applyRoute(url);
         }
     });
 });

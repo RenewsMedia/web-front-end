@@ -6,34 +6,32 @@
 
 define(function(require) {
     var _ = require('underscore'),
-        BaseClass = require('app/base/BaseClass');
+        BaseClass = require('app/base/BaseClass'),
+        GlobalBus = require('app/GlobalBus');
     
     var _handlers = {
-        AuthRequires: function(e) {
-            console.log(e.toString());
+        AuthRequired: function() {
+            GlobalBus.redirect('/sign/in');
         },
 
-        OnlyForGuests: function(e) {
-            console.log(e.toString());
-        },
-
-        default: function(e) {
-            console.log(e.toString());
+        OnlyForGuests: function() {
+            GlobalBus.redirect('/');
         }
     };
     
-    return BaseClass.extend({
+    var ErrorHandler = BaseClass.extend({
         handle: function() {
-            var e = arguments[4],
-                handler = 'default';
-
-            if (_.has(_handlers, e.name)) {
-                handler = e.name;
+            var e = arguments[0];
+            if (arguments.length > 1) {
+                e = arguments[4];
             }
 
-            _handlers[handler].call(this, e);
-
-            return true;
+            if (_.has(_handlers, e.name)) {
+                _handlers[e.name].call(this, e);
+                return true;
+            }
         }
     });
+    
+    return new ErrorHandler();
 });

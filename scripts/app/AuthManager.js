@@ -40,9 +40,11 @@ define(function(require) {
         },
 
         signOut: function() {
-            return this._sendRequest({
-                url: '/sign/out'
-            });
+            var dfd = new Backbone.$.Deferred();
+            _cookie.drop(config.auth.id_cookie);
+            _cookie.drop(config.auth.pass_cookie);
+            dfd.resolve();
+            return dfd;
         },
 
         setAuthCookies: function(data) {

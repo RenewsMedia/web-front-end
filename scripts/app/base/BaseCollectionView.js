@@ -10,7 +10,7 @@ define(function(require) {
         BaseView = require('app/base/BaseView');
 
     return BaseView.extend({
-        itemViewConstructor: BaseView,
+        itemViewConstructor: undefined,
 
         initialize: function() {
             this.prepareItems();
@@ -22,6 +22,9 @@ define(function(require) {
         },
 
         prepareItems: function() {
+            if (!this.itemViewConstructor) {
+                return;
+            }
             this.items = _.map(this.collection.models, this.createItemView, this);
         },
 
@@ -37,7 +40,9 @@ define(function(require) {
         render: function() {
             this._template = this._template || this.hbs.compile(this.template);
             this.setElement(this._template(this.getData()));
-            this.renderItems();
+            if (this.itemViewConstructor) {
+                this.renderItems();
+            }
             this.trigger('render');
             this.delegateEvents();
             return this;

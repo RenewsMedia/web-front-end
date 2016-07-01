@@ -3,7 +3,7 @@ define(function(require) {
         CountryModel = require('components/country/CountryModel');
 
     var CountriesCollection = BaseCollection.extend({
-        urlRoot: '/countries',
+        url: '/countries',
         model: CountryModel,
         
         initialize: function() {
@@ -11,9 +11,5 @@ define(function(require) {
         }
     });
     
-    var countriesCollection = new CountriesCollection();
-    
-    return function() {
-        return countriesCollection;
-    };
+    return new CountriesCollection();
 });

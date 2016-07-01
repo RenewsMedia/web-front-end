@@ -18,7 +18,7 @@ define(function(require) {
         initialize: function(options) {
             var FormViewConstructor = SignInFormView;
             this.signType = options.signType;
-            
+
             if (this.signType === 'out') {
                 return this.signOut();
             }

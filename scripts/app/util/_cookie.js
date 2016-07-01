@@ -6,10 +6,11 @@
 
 define(function(require) {
     var _ = require('underscore'),
+        _window = require('app/util/_window'),
         moment = require('moment');
 
     var Cookie = function() {
-        this.source = document.cookie;
+        this.source = _window.document.cookie;
         this.controlCache = '';
         this._cookies = {};
     };
@@ -42,7 +43,7 @@ define(function(require) {
                 expires = moment().add(1, 'year');
             }
 
-            document.cookie = name + '=' + value + '; expires=' + expires.toString();
+            _window.document.cookie = name + '=' + value + '; path=/; expires=' + expires.toString();
             this.parse();
         },
 

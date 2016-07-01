@@ -9,18 +9,12 @@ define(function(require) {
         BaseClass = require('app/base/BaseClass'),
         _url = require('app/util/_url'),
         _window = require('app/util/_window'),
-        ControllerFactory = require('app/ControllerFactory'),
-        history = _window.history;
+        ControllerFactory = require('app/ControllerFactory');
 
     return BaseClass.extend({
-        constructor: function(config) {
+        initialize: function(config) {
             this.config = config;
-            this.initialize();
-        },
-
-        initialize: function() {
             this.initEvents();
-            this.applyRoute(_window.location.href);
         },
 
         initEvents: function() {
@@ -33,7 +27,7 @@ define(function(require) {
 
             options = ControllerFactory.prepareParams(this.route.controller, this.route.params);
 
-            if (this.route.controller === this.controllerName) {
+            if (this.route.controller === this.controllerName && this.controller) {
                 this.controller.setOptions(options);
             } else {
                 Controller = ControllerFactory.getConstructor(this.route.controller);
@@ -43,7 +37,7 @@ define(function(require) {
             }
 
             if (route !== _window.location.href) {
-                history.pushState({
+                _window.history.pushState({
                     url: route
                 }, 'title', route);
             }
